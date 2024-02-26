@@ -1,0 +1,27 @@
+name: Run tests
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: checkout test
+        uses: actions/checkout@v4
+        with:
+          repository: 'jeppew/security-workflow'
+          ref: 'master'
+          sparse-checkout: |
+            src/main/scala/Main.scala
+          sparse-checkout-cone-mode: false
+
+      - name: Run tests
+        run: |
+          env
+          find . -ls
