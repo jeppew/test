@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'jeppew/security-workflow'
+          ref: 'main'
           sparse-checkout: |
             src/main/scala/Main.scala
           sparse-checkout-cone-mode: false
