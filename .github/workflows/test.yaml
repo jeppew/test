@@ -28,9 +28,9 @@ jobs:
           repository: 'blohmsoft/bcs-infrastructure'
           ref: 'master'
           token: '${{ secrets.HELM_TEST_SECRET_2 }}'
-          sparse-checkout: |
-            charts/packages/bcs-scala-application-0.0.1.tgz
-          sparse-checkout-cone-mode: false
+          # sparse-checkout: |
+          #   charts/packages/bcs-scala-application-0.0.1.tgz
+          # sparse-checkout-cone-mode: false
 
       - name: Run tests
         run: |
