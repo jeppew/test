@@ -22,10 +22,11 @@ jobs:
             src/main/scala/Main.scala
           sparse-checkout-cone-mode: false
 
-      - name: checkout test
+      - name: checkout test 2
         uses: actions/checkout@v4
         with:
           repository: 'blohmsoft/bcs-infrastructure'
+          ref: 'master'
           token: '${{ secrets.HELM_TEST_SECRET_2 }}'
           sparse-checkout: |
             charts/packages/bcs-scala-application-0.0.1.tgz
